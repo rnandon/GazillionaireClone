@@ -1,0 +1,15 @@
+﻿@page "/Gazillionaire"
+@using global::Gazillionaire.Models
+
+<h3>Gazillionaire</h3>
+<h4>@_game.Status</h4>
+<button onclick="@AdvanceGameState">Advance State</button>
+
+@code {
+    private readonly Game _game = new Game();
+
+    public void AdvanceGameState()
+    {
+        _game.AdvanceState();
+    }
+}
